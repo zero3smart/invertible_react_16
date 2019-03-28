@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addFlashMessage } from '../actions/flashMessages';
 import Performance from './Performance';
@@ -15,12 +16,12 @@ class HomePage extends React.Component {
 }
 
 HomePage.propTypes = {
-    isAuthenticated: React.PropTypes.bool.isRequired,
-    addFlashMessage: React.PropTypes.func.isRequired
+    isAuthenticated: PropTypes.bool.isRequired,
+    addFlashMessage: PropTypes.func.isRequired
 }
 
 HomePage.contextTypes = {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {

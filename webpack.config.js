@@ -58,7 +58,7 @@ module.exports = {
     })*/
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)$/,
         include: [
@@ -66,13 +66,6 @@ module.exports = {
         ],
         exclude: /(node_modules|bower_components)/,
         loaders: ['babel-loader']
-      },
-      {
-        test: /\.(js|jsx)$/,
-        include: [
-          /node_modules\/react-smart-data-table/
-        ],
-        loaders: ["babel-loader"]
       },
       {
         test: /\.css$/,
@@ -89,7 +82,7 @@ module.exports = {
         loaders: ["style-loader", "css-loader", "sass-loader"]
       },
       {
-        test: /.*\.(gif|png|jpe?g|eot|woff2|woff|ttf|svg)$/i,
+        test: /\.(ttf|eot|svg|gif|jpg|png|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         use: [
           {
             loader: 'url-loader',

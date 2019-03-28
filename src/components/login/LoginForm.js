@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TextFieldGroup from '../common/TextFieldGroup';
 import validateInput from '../../utils/validations/login';
 import { connect } from 'react-redux';
@@ -84,12 +85,12 @@ class LoginForm extends React.Component {
 }
 
 LoginForm.propTypes = {
-    login: React.PropTypes.func.isRequired,
-    deleteFlashAllMessages: React.PropTypes.func.isRequired
+    login: PropTypes.func.isRequired,
+    deleteFlashAllMessages: PropTypes.func.isRequired
 }
 
 LoginForm.contextTypes = {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
 }
 
 export default connect(null, { login, deleteFlashAllMessages })(LoginForm);
